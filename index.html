@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriTechNiks Official Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            position: fixed; /* Keep the header fixed at the top */
+            width: 100%; /* Ensure it spans the full width */
+            z-index: 1000; /* Bring it above other content */
+        }
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+        }
+        .scroll-container {
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            height: 100vh;
+            padding-top: 80px; /* Space for the fixed header */
+        }
+        .snap-section {
+            scroll-snap-align: start;
+            height: 100vh;
+            display: flex;
+            flex-direction: column; /* Change to column for stacking */
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            color: #333;
+            position: relative; /* To position the link absolutely */
+        }
+        .back-to-home {
+            position: absolute; /* Position it absolutely within the section */
+            top: 20px; /* Adjust the distance from the top */
+            left: 20px; /* Adjust the distance from the left */
+            font-size: 1em;
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div style="display: flex; align-items: center;">
+            <img src="logo.jpg" alt="AgriTechNiks Logo" style="height: 50px; margin-right: 10px;">
+            <span>AGRITECHNIKS</span>
+        </div>
+        <nav class="nav">
+            <a href="#home">Home</a>
+            <a href="#about">About the Product</a>
+            <a href="#wala">Wala Ma Isip Sotnas Nlang</a>
+            <a href="#aboutus">About Us</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
+    </header>
+    
+    <div class="scroll-container">
+        <section class="snap-section" id="home" style="background-color: #ffadad;">
+            HOME
+        </section>
+        <section class="snap-section" id="about" style="background-color: #ffd6a5;">
+            ABOUT THE PRODUCT SECTION
+        </section>
+        <section class="snap-section" id="wala" style="background-color: #fdffb6;">
+            WALA MA ISIP SOTNAS NLNG
+        </section>
+        <section class="snap-section" id="aboutus" style="background-color: #caffbf;">
+            ABOUT US
+        </section>
+        <section class="snap-section" id="contact" style="background-color: #9bfbc0;">
+            CONTACT US
+        </section>
+    </div>
+
+    <script>
+        document.querySelectorAll('.nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
