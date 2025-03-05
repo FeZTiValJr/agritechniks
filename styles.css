@@ -82,35 +82,54 @@ header {
 <!-- About Us Section -->
 <style>
     .about {
+        padding: 60px 20px;
+        background-color: #f8f9fa;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .content-wrapper {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 40px 20px;
-        background-color: #f8f9fa;
+        flex-wrap: wrap;
     }
-    .about .text-content {
+    .text-content {
         flex: 1;
-        text-align: left;
         max-width: 600px;
     }
-    .about h2 {
+    .section-title {
+        font-size: 32px;
+        font-weight: bold;
         color: #333;
         margin-bottom: 20px;
     }
-    .about p {
-        font-size: 16px;
+    .text-content p {
+        font-size: 18px;
         color: #555;
+        line-height: 1.6;
+        margin-bottom: 15px;
     }
-    .about .image-box {
+    .image-box {
         flex: 1;
-        display: flex;
-        justify-content: center;
+        text-align: center;
     }
-    .about .image-box img {
+    .image-box img {
         max-width: 100%;
         height: auto;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    @media (max-width: 768px) {
+        .content-wrapper {
+            flex-direction: column;
+            text-align: center;
+        }
+        .text-content {
+            max-width: 100%;
+        }
     }
 </style>
 
