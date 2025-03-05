@@ -1,290 +1,122 @@
+/* General Styles */
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
 }
 
 .container {
-    width: 90%;
-    margin: 0 auto;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
 }
 
-header {
+/* Header Styles */
+.header {
+    background: #2c5f2d;
+    color: #fff;
+    padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
 }
 
-.nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo-img {
+.header .logo img {
     height: 50px;
-    margin-right: 10px;
 }
 
-<!-- Business Homepage -->
-<style>
-    .homepage {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        background: url('your-background-image.jpg') no-repeat center center/cover;
-        color: white;
-        text-align: center;
-        padding: 40px;
-    }
-    .homepage .content {
-        max-width: 600px;
-        background: rgba(0, 0, 0, 0.6);
-        padding: 20px;
-        border-radius: 10px;
-    }
-    .homepage h1 {
-        font-size: 48px;
-        margin-bottom: 20px;
-    }
-    .homepage p {
-        font-size: 18px;
-        margin-bottom: 20px;
-    }
-    .homepage .cta-button {
-        display: inline-block;
-        padding: 12px 24px;
-        background-color: #ff9800;
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-        border-radius: 5px;
-        transition: background 0.3s ease;
-    }
-    .homepage .cta-button:hover {
-        background-color: #e68900;
-    }
-</style>
+.header .nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
 
-<!-- About Us Section -->
-<style>
-    .about {
-        padding: 60px 20px;
-        background-color: #f8f9fa;
-    }
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-    }
-    .content-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-    .text-content {
-        flex: 1;
-        max-width: 600px;
-    }
-    .section-title {
-        font-size: 32px;
-        font-weight: bold;
-        color: #333;
-        margin-bottom: 20px;
-    }
-    .text-content p {
-        font-size: 18px;
-        color: #555;
-        line-height: 1.6;
-        margin-bottom: 15px;
-    }
-    .image-box {
-        flex: 1;
-        text-align: center;
-    }
-    .image-box img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    @media (max-width: 768px) {
-        .content-wrapper {
-            flex-direction: column;
-            text-align: center;
-        }
-        .text-content {
-            max-width: 100%;
-        }
-    }
-</style>
+.header .nav a:hover {
+    text-decoration: underline;
+}
 
-/* Features Section */
-.features {
-    padding: 60px 0;
+/* Hero Section */
+.hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero h2 {
+    font-size: 36px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #ff9800;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background: #e68900;
+}
+
+/* Section Styles */
+section {
+    padding: 50px 0;
     text-align: center;
 }
 
-.feature-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+/* Product Grid */
+.product-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.feature-item {
-    background-color: white;
+.product-item {
+    background: #fff;
     padding: 20px;
+    margin: 10px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.feature-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-<!-- New Maintenance and Ordering Box with CSS -->
-<style>
-    .maintenance-order {
-        background-color: #f8f9fa;
-        padding: 40px 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    .maintenance-order .container {
-        max-width: 600px;
-        margin: auto;
-        text-align: center;
-    }
-    .maintenance-order h2 {
-        color: #333;
-        margin-bottom: 20px;
-    }
-    .maintenance-info p {
-        font-size: 16px;
-        color: #555;
-        margin-bottom: 15px;
-    }
-    .order-form {
-        background: #ffffff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        text-align: left;
-    }
-    .order-form h3 {
-        text-align: center;
-        margin-bottom: 15px;
-    }
-    .form-group {
-        margin-bottom: 15px;
-    }
-    .form-group label {
-        display: block;
-        font-weight: bold;
-        margin-bottom: 5px;
-    }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 14px;
-    }
-    .form-group textarea {
-        resize: vertical;
-        height: 100px;
-    }
-    button {
-        width: 100%;
-        padding: 10px;
-        background-color: #007bff;
-        border: none;
-        color: white;
-        font-size: 16px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background 0.3s ease;
-    }
-    button:hover {
-        background-color: #0056b3;
-    }
-</style>
-
-<section class="maintenance-order" id="maintenance-order">
-    <div class="container">
-        <h2>Maintenance & Ordering Services</h2>
-        <div class="maintenance-info">
-            <p>Need maintenance or want to place an order? We're here to help!</p>
-            <p>For immediate assistance, contact our support team.</p>
-        </div>
-        <div class="order-form">
-            <h3>Request Service or Order</h3>
-            <form action="#" method="post">
-                <div class="form-group">
-                    <label for="name">Full Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email Address:</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="service-type">Service Type:</label>
-                    <select id="service-type" name="service-type" required>
-                        <option value="maintenance">Maintenance Request</option>
-                        <option value="order">Place an Order</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="details">Details:</label>
-                    <textarea id="details" name="details" placeholder="Describe your request or order details" required></textarea>
-                </div>
-                
-                <button type="submit">Submit Request</button>
-            </form>
-        </div>
-    </div>
-</section>
-
-
-/* Footer */
-.footer {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
     text-align: center;
 }
 
-.footer p {
-    margin: 0;
+.product-item img {
+    max-width: 100%;
+    border-radius: 5px;
 }
 
-.social-media a {
-    margin: 0 10px;
+/* Services List */
+.services ul {
+    list-style: none;
+    padding: 0;
 }
 
-.social-media img {
-    width: 24px;
-    height: 24px;
+.services ul li {
+    background: #dcedc8;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Contact & Footer */
+.contact {
+    background: #388e3c;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer {
+    background: #2c5f2d;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
 }
