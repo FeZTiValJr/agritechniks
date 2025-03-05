@@ -133,25 +133,115 @@ header {
     border-radius: 8px;
 }
 
-/* Testimonials Section */
-.testimonials {
-    background-color: #ffadad;
-    padding: 60px 0;
-    text-align: center;
-}
+<!-- New Maintenance and Ordering Box with CSS -->
+<style>
+    .maintenance-order {
+        background-color: #f8f9fa;
+        padding: 40px 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .maintenance-order .container {
+        max-width: 600px;
+        margin: auto;
+        text-align: center;
+    }
+    .maintenance-order h2 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+    .maintenance-info p {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 15px;
+    }
+    .order-form {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: left;
+    }
+    .order-form h3 {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+    .form-group textarea {
+        resize: vertical;
+        height: 100px;
+    }
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        border: none;
+        color: white;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
 
-.testimonial {
-    max-width: 600px;
-    margin: 0 auto;
-    font-size: 1.2rem;
-    font-style: italic;
-}
+<section class="maintenance-order" id="maintenance-order">
+    <div class="container">
+        <h2>Maintenance & Ordering Services</h2>
+        <div class="maintenance-info">
+            <p>Need maintenance or want to place an order? We're here to help!</p>
+            <p>For immediate assistance, contact our support team.</p>
+        </div>
+        <div class="order-form">
+            <h3>Request Service or Order</h3>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="service-type">Service Type:</label>
+                    <select id="service-type" name="service-type" required>
+                        <option value="maintenance">Maintenance Request</option>
+                        <option value="order">Place an Order</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="details">Details:</label>
+                    <textarea id="details" name="details" placeholder="Describe your request or order details" required></textarea>
+                </div>
+                
+                <button type="submit">Submit Request</button>
+            </form>
+        </div>
+    </div>
+</section>
 
-.testimonial span {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-}
 
 /* Footer */
 .footer {
