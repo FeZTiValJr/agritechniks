@@ -73,31 +73,45 @@
         </div>
     </section>
 
-   <!-- Maintenance and Ordering Box -->
+<!-- New Maintenance and Ordering Box -->
 <section class="maintenance-order" id="maintenance-order">
     <div class="container">
-        <h2>Maintenance & Ordering</h2>
+        <h2>Maintenance & Ordering Services</h2>
         <div class="maintenance-info">
-            <p>If you require maintenance services or want to place an order, please reach out to us.</p>
-            <p>For urgent maintenance issues, contact our support team immediately.</p>
+            <p>Need maintenance or want to place an order? We're here to help!</p>
+            <p>For immediate assistance, contact our support team.</p>
         </div>
         <div class="order-form">
-            <h3>Place an Order</h3>
+            <h3>Request Service or Order</h3>
             <form action="#" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
                 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
                 
-                <label for="order-details">Order Details:</label>
-                <textarea id="order-details" name="order-details" required></textarea>
+                <div class="form-group">
+                    <label for="service-type">Service Type:</label>
+                    <select id="service-type" name="service-type" required>
+                        <option value="maintenance">Maintenance Request</option>
+                        <option value="order">Place an Order</option>
+                    </select>
+                </div>
                 
-                <button type="submit">Submit</button>
+                <div class="form-group">
+                    <label for="details">Details:</label>
+                    <textarea id="details" name="details" placeholder="Describe your request or order details" required></textarea>
+                </div>
+                
+                <button type="submit">Submit Request</button>
             </form>
         </div>
     </div>
-</section>
+</section>>
 
     <!-- Footer Section -->
     <footer class="footer" id="contact">
