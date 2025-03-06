@@ -195,3 +195,44 @@ section {
 .order-form button:hover {
     background: #e68900;
 }
+
+/* Footer Section */
+.footer {
+    background: #2c5f2d;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer p {
+    margin: 10px 0;
+}
+
+/* Social Media Links in Footer */
+.footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.footer .social-links a {
+    display: inline-block;
+}
+
+.footer .social-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer .social-icon:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
